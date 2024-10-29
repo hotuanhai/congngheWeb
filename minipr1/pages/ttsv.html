@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Thông tin môn học</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../asset/style.css">
+<style>
+    .activeNav {
+        background-color: #04AA6D;
+        color: #fff;
+    }
+
+    .activeNav:hover {
+        background-color: #04AA6D !important; /* Keep the same background color */
+        color: #fff !important; /* Keep the same text color */
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-theme-l1" id="logo"><img src="../asset/img/hustLogo.png"></a>
+    <a href="ttmh.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Thông tin môn học</a>
+    <a href="ccnw.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Các công nghệ Web</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white activeNav">Thông tin sinh viên</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#ttc">Thông tin cơ bản</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#hv">Học vấn</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#kn">Kinh nghiệm</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64" id="">
+        <!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+    
+      <!-- Left Column -->
+      <div class="w3-third">
+      
+        <div class="w3-white w3-text-grey w3-card-4" id="ttc">
+          <div class="w3-display-container">
+            <img src="../asset/img/bocchi2.webp" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+              <h2>Hồ Tuấn Hải</h2>
+            </div>
+          </div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Web developer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Hà Nội</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>hai.ht210304</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>0123456789</p>
+          </div>
+        </div>
+        <div class="w3-white w3-text-grey w3-card-4 w3-padding-3" style="margin-top: 30px;">
+          <div class="w3-display-container">
+            <a href="https://www.w3schools.com/howto/howto_website_create_resume.asp">
+              <img src="../asset/img/relatedPic/resume.webp" style="width:100%;height: auto;" alt="Avatar">
+            </a>
+          </div>
+
+        </div>
+  
+      <!-- End Left Column -->
+      </div>
+  
+      <!-- Right Column -->
+      <div class="w3-twothird">
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom" id="hv">
+            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Học vấn</h2>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>THPT Phạm Hồng Thái</b></h5>
+              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2021</h6>
+              <p>Tốt nghiệp THPT</p>
+              <hr>
+            </div>
+            <div class="w3-container">
+              <h5 class="w3-opacity"><b>Đại học Bách Khoa Hà Nội</b></h5>
+              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - nay</h6>
+              <p>Cử nhân</p><br>
+            </div>
+          </div>
+      
+        <div class="w3-container w3-card w3-white " id="kn">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Kinh nghiệm</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>eCommerce using MERN</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022</span></h6>
+            <p>Tạo trang web bán hàng online sử dụng công nghệ mới</p>
+            <p>Công nghệ: MongoDB, Express, React, NodeJS</p>
+            <a href="https://github.com/hotuanhai/mern_y2_ecommerce" class=" w3-round w3-hover-green w3-large">
+                eCommerce
+            </a>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Simple Calculator</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2023</h6>
+            <p>Tạo 1 máy tính đơn giản sử dụng Generic algorithm</p>
+            <p>Công nghệ: Python</p>
+            <a href="https://github.com/hotuanhai/solveEquation_genericAlgo" class=" w3-round w3-hover-green w3-large">
+                Simple Calculator
+            </a>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Simple Music Player</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2024</h6>
+            <p>Tạo 1 app nghe nhạc đơn giản </p>
+            <p>Công nghệ: HTML, CSS, Javácript</p>
+            <a href="https://github.com/hotuanhai/jsF8_musicPlayer" class=" w3-round w3-hover-green w3-large">
+                Music Player
+            </a>
+          </div>
+        </div>
+  
+        
+  
+      <!-- End Right Column -->
+      </div>
+      
+    <!-- End Grid -->
+    </div>
+    
+    <!-- End Page Container -->
+  </div>
+    </div>
+  
+    <footer id="myFooter">
+      <div class="w3-container w3-light-green w3-padding-32 w3-center">
+        <h2>Bài tập Mini-project 1</h2>
+      </div>
+      <div class="w3-container w3-theme-d1 w3-padding-16 w3-center">
+        <a href="https://www.facebook.com/w3schoolscom/" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fab fa-facebook-square"></i> Facebook
+        </a>
+        <a id="profile-link" href="https://discord.com/invite/w3schools" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fa-brands fa-discord"></i> Discord
+        </a>
+        <a href="https://www.instagram.com/w3schools.com_official/" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fa-brands fa-linkedin"></i> Linkedin
+        </a>
+        <a href="https://www.youtube.com/@w3schools" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fa-brands fa-youtube"></i> Youtube
+        </a>
+      </div>
+    </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

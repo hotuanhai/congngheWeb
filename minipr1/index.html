@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BT mini project 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./asset/style.css">
+
+<style>
+    .activeNav {
+        background-color: #04AA6D !important;
+        color: #fff !important;
+    }
+
+    .activeNav:hover {
+        background-color: #04AA6D !important; /* Keep the same background color */
+        color: #fff !important; /* Keep the same text color */
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1 activeNav" id="logo"><img src="./asset/img/hustLogo.png"></a>
+    <a href="./pages/ttmh.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Thông tin môn học</a>
+    <a href="./pages/ccnw.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Các công nghệ Web</a>
+    <a href="./pages/ttsv.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Thông tin sinh viên</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#ttkg">Thông tin khai giảng</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#ctcd">Cách thứ chấm điểm</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#gvhd">Giảng viên hướng dẫn</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64" id="ttkg">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" >Thông tin khai giảng</h1>
+      <p>Dành cho những sinh viên đăng kí lớp thành công trên hệ thống. 
+        Lớp khai giảng vào 12/9/2024 lúc 14h10 tại phòng D9-501. 
+        Buổi học đầu tiên sinh viên không cần mang laptop</p>
+        <img src="./asset/img/relatedPic/map.png" alt="map" style="width: 100%;height: auto;">
+    </div>
+    <div class="w3-third w3-container">
+      <p class=" w3-padding-large w3-padding-32 w3-center">
+        <a href="https://www.facebook.com/clbhthtbk/" target="_blank">
+          <img src="./asset/img/ad/hthtHUST.png" alt="ho tro ht" style="width: 100%; height: auto; object-fit: contain;">
+        </a>
+      </p>
+      <p class=" w3-padding-large w3-padding-32 w3-center">
+        <a href="https://www.facebook.com/EsHUST.hust/?locale=vi_VN" target="_blank">
+          <img src="./asset/img/ad/eshust.png" alt="ho tro sv" style="width: 100%; height: auto; object-fit: contain;">
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-row" id="ctcd">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" >Cách thứ chấm điểm</h1>
+      <p>Khóa học kéo dài 4 tuần.</p>
+      <p>Điểm quá trình tính theo:  </p>
+      <ul>
+        <li>Các bài tập quiz hàng tuần (40%)</li>
+        <li>3 bài mini project (50%)</li>
+        <li>Điểm chuyên cần (10%)</li>
+      </ul>
+      <p>Thi cuối kì trên phòng máy </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class=" w3-padding-large w3-padding-32 w3-center">
+        <a href="https://www.facebook.com/bk0st4/" target="_blank">
+          <img src="./asset/img/ad/bkost.jpg" alt="bk0st" style="width: 100%; height: auto; object-fit: contain;">
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="gvhd">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" >Giảng viên hướng dẫn</h1>
+      <p>Những thạc sĩ, tiến sĩ thuộc Trường CNTT&TT</p>
+      <ul>
+        <li>Ts.Đỗ Bá Lâm</li>
+        <li>Ts.Phạm Huy Hoàng</li>
+        <li>Ts.Tạ Hải Tùng</li>
+      </ul>
+    </div>
+    <div class="w3-third w3-container">
+      <p class=" w3-padding-large w3-padding-32 w3-center">
+        <a href="https://bktoanthu.com/" target="_blank">
+          <img src="./asset/img/ad/bkdc.jpg" alt="bk dcmp" style="width: 100%; height: auto; object-fit: contain;">
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-light-green w3-padding-32 w3-center">
+      <h2>Bài tập Mini-project 1</h2>
+    </div>
+    <div class="w3-container w3-theme-d1 w3-padding-16 w3-center">
+      <a href="https://www.facebook.com/w3schoolscom/" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fab fa-facebook-square"></i> Facebook
+      </a>
+      <a id="profile-link" href="https://discord.com/invite/w3schools" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fa-brands fa-discord"></i> Discord
+      </a>
+      <a href="https://www.instagram.com/w3schools.com_official/" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fa-brands fa-linkedin"></i> Linkedin
+      </a>
+      <a href="https://www.youtube.com/@w3schools" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fa-brands fa-youtube"></i> Youtube
+      </a>
+    </div>
+  </footer>
+  
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Thông tin môn học</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../asset/style.css">
+<style>
+    .activeNav {
+        background-color: #04AA6D;
+        color: #fff;
+    }
+
+    .activeNav:hover {
+        background-color: #04AA6D !important; /* Keep the same background color */
+        color: #fff !important; /* Keep the same text color */
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-theme-l1" id="logo"><img src="../asset/img/hustLogo.png"></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white activeNav">Thông tin môn học</a>
+    <a href="ccnw.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Các công nghệ Web</a>
+    <a href="ttsv.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Thông tin sinh viên</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#mtmh">Mô tả môn học</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#dk">Điều kiện</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64" id="mtmh">
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal" >Mô tả môn học</h1>
+        <p>Học phần cung cấp các kiến thức cần thiết để xây dựng và phát triển các ứng dụng,
+         dịch vụ trực tuyến trên môi trường web. Sau khi học xong học phần này,
+          sinh viên có khả năng:</p>
+        <ul>
+            <li>Có thể sử dụng một ngôn ngữ lập trình như JSP, PHP để phát triển ứng dụng web cho 
+                các lĩnh vực khác nhau như: hệ quản trị nội dung (CMS), cổng thông tin (Portal), 
+                hay các ứng dụng điện tử (eCommerce, eLearning, eGoverment,...)
+            </li>
+            <li>
+                Nắm vững được các công nghệ web, các platform, framework hiện đang thịnh hành.
+            </li>
+        </ul>
+        <p>Ngoài ra học phần cũng cung cấp cho sinh viên các kỹ năng làm việc nhóm, thuyết trình và 
+            thái độ cần thiết để làm việc và ứng dụng các kỹ thuật trong các dự án, công ty về phần mềm 
+            sau này.</p>
+          
+    </div>
+    <div class="w3-third w3-container">
+      <p class=" w3-padding-large w3-padding-32 w3-center">
+        <a href="https://tailieuhust.com/cong-nghe-web-va-dich-vu-truc-tuyen/" target="_blank">
+          <img src="../asset/img/ad/cngheweb.png" alt="web" style="width: 100%; height: auto; object-fit: contain;">
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-row" id="dk">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal" >Điều kiện</h1>
+      <p>Học phần tiên quyết:  -</p>
+      <p>Học phần học trước:  - </p>
+      <ul>
+        <li>IT3090 hoặc IT3091: Cơ sở dữ liệu</li>
+        <li>IT3100 hoặc IT3600: Lập trình hướng đối tượng</li>
+      </ul>
+      <p>Học phần song hành:  - </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class=" w3-padding-large w3-padding-32 w3-center">
+        <a href="https://tailieuhust.com/tai-lieu-lap-trinh-huong-doi-tuong-cttt-hu/" target="_blank">
+          <img src="../asset/img/ad/oop.png" alt="oop" style="width: 100%; height: auto; object-fit: contain;">
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-light-green w3-padding-32 w3-center">
+      <h2>Bài tập Mini-project 1</h2>
+    </div>
+    <div class="w3-container w3-theme-d1 w3-padding-16 w3-center">
+      <a href="https://www.facebook.com/w3schoolscom/" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fab fa-facebook-square"></i> Facebook
+      </a>
+      <a id="profile-link" href="https://discord.com/invite/w3schools" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fa-brands fa-discord"></i> Discord
+      </a>
+      <a href="https://www.instagram.com/w3schools.com_official/" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fa-brands fa-linkedin"></i> Linkedin
+      </a>
+      <a href="https://www.youtube.com/@w3schools" target="_blank" class="w3-button w3-hover-opacity">
+        <i class="fa-brands fa-youtube"></i> Youtube
+      </a>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

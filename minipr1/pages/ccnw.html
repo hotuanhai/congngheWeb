@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Các công nghệ web</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../asset/style.css">
+<style>
+    .activeNav {
+        background-color: #04AA6D;
+        color: #fff;
+    }
+
+    .activeNav:hover {
+        background-color: #04AA6D !important; /* Keep the same background color */
+        color: #fff !important; /* Keep the same text color */
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-theme-l1" id="logo"><img src="../asset/img/hustLogo.png"></a>
+    <a href="ttmh.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Thông tin môn học</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small activeNav"  > 
+      Các công nghệ Web
+    </a>
+    <a href="ttsv.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Thông tin sinh viên</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#fe">Front-end</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#be">Back-end</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#db">Database</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+  <div class="w3-row w3-padding-64">
+    <img src="../asset/img/relatedPic/fullstack.png" style="width: 80%;height: auto;" class="w3-row w3-padding-64">
+  </div>
+    <div class="w3-row w3-padding-64" id="fe">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Front-end (Giao diện người dùng)</h1>
+            <p>Các công nghệ front-end tập trung vào việc phát triển giao diện web, nơi người dùng tương tác với ứng dụng.</p>
+            <ul>
+                <li><strong>HTML/CSS/JavaScript:</strong> Nền tảng cơ bản cho bất kỳ ứng dụng web nào.</li>
+                <ul>
+                    <li><strong>HTML:</strong> (HyperText Markup Language) dùng để tạo cấu trúc trang web.</li>
+                    <li><strong>CSS:</strong> (Cascading Style Sheets) giúp định dạng và thiết kế giao diện.</li>
+                    <li><strong>JavaScript:</strong> Giúp trang web có tính năng động và tương tác.</li>
+                </ul>
+                <li><strong>Framework/Thư viện JavaScript:</strong></li>
+                <ul>
+                    <li><strong>React.js:</strong> Thư viện UI phổ biến do Facebook phát triển, dùng để xây dựng giao diện người dùng dựa trên component.</li>
+                    <li><strong>Vue.js:</strong> Framework nhẹ và dễ học, cung cấp các tính năng để xây dựng ứng dụng SPA (Single Page Application).</li>
+                    <li><strong>Angular:</strong> Framework của Google cung cấp giải pháp toàn diện cho phát triển ứng dụng web, với hệ thống routing, state management, và dependency injection.</li>
+                </ul>
+                <li><strong>CSS Frameworks:</strong></li>
+                <ul>
+                    <li><strong>Bootstrap:</strong> Framework CSS phổ biến giúp xây dựng giao diện nhanh chóng và responsive.</li>
+                    <li><strong>Tailwind CSS:</strong> Framework utility-first, cho phép viết CSS nhanh chóng bằng cách sử dụng các class.</li>
+                </ul>
+            </ul>
+
+        </div>
+        <div class="w3-third w3-container">
+            <p class=" w3-padding-large w3-padding-32 w3-center">
+              <a href="https://fullstack.edu.vn/landing/htmlcss" target="_blank">
+                <img src="../asset/img/ad/html.png" alt="HTML CSS Pro" style="width: 100%; height: auto; object-fit: contain;">
+              </a>
+            </p>
+            <p class=" w3-padding-large w3-padding-32 w3-center">
+              <a href="https://fullstack.edu.vn/landing/htmlcss" target="_blank">
+                <img src="../asset/img/ad/js.png" alt="JS Pro" style="width: 100%; height: auto; object-fit: contain;">
+              </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="w3-row" id="be">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal" >Back-end</h1>
+            <p>Back-end bao gồm các công nghệ chịu trách nhiệm quản lý dữ liệu,
+            xử lý logic và giao tiếp với cơ sở dữ liệu.</p>
+            <ul>
+                <li><strong>Node.js:</strong> Nền tảng JavaScript chạy phía server, cho phép phát triển ứng dụng server-side bằng JavaScript.</li>
+                <li><strong>Express.js:</strong> Framework nhẹ dành cho Node.js, giúp xây dựng API và các ứng dụng server đơn giản.</li>
+                <li><strong>PHP:</strong> Ngôn ngữ lập trình phổ biến với nhiều hệ quản trị nội dung như WordPress. Phù hợp cho phát triển web truyền thống.</li>
+                <li><strong>Java (Spring Boot):</strong> Framework mạnh mẽ cho việc xây dựng ứng dụng web trong môi trường Java. Spring Boot cung cấp cấu hình tự động và hỗ trợ tốt cho REST API.</li>
+                <li><strong>Python (Django, Flask):</strong> </li>
+                <ul>
+                    <li><strong>Django:</strong> Framework Python mạnh mẽ, đi kèm với nhiều công cụ như ORM, authentication, và admin panel.</li>
+                    <li><strong>Flask:</strong> Micro-framework linh hoạt cho những dự án nhỏ hoặc cần tùy chỉnh.</li>
+                </ul>   
+            </ul>
+        </div>
+        <div class="w3-third w3-container">
+          <p class=" w3-padding-large w3-padding-32 w3-center">
+            <a href="https://fullstack.edu.vn/courses/nodejs" target="_blank">
+              <img src="../asset/img/ad/nodejs.png" alt="Node Pro" style="width: 100%; height: auto; object-fit: contain;">
+            </a>
+          </p>
+          <p class=" w3-padding-large w3-padding-32 w3-center">
+            <a href="https://www.springpeople.com/advanced-python-training" target="_blank">
+              <img src="../asset/img/ad/python.png" alt="python Pro" style="width: 100%; height: auto; object-fit: contain;">
+            </a>
+          </p>
+        </div>
+    </div>
+
+    <div class="w3-row" id="db">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Cơ sở dữ liệu</h1>
+            <ul>
+                <li><strong>SQL:</strong></li>
+                <ul>
+                    <li><strong>MySQL:</strong> Hệ quản trị cơ sở dữ liệu quan hệ phổ biến, dùng SQL để quản lý dữ liệu.</li>
+                    <li><strong>PostgreSQL:</strong> Hệ quản trị cơ sở dữ liệu quan hệ mạnh mẽ, cũng sử dụng SQL để quản lý dữ liệu.</li>
+                </ul>
+                <li><strong>NoSQL:</strong></li>
+                <ul>
+                    <li><strong>MongoDB:</strong> Cơ sở dữ liệu NoSQL phổ biến, sử dụng cấu trúc document-based (dữ liệu lưu dưới dạng JSON).</li>
+                    <li><strong>Redis:</strong> Hệ thống lưu trữ dữ liệu dạng key-value, thường dùng cho cache hoặc các hệ thống lưu trữ tạm thời.</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="w3-third w3-container">
+          <p class=" w3-padding-large w3-padding-32 w3-center">
+            <a href="https://www.tgcindia.com/course/mysql-training/" target="_blank">
+              <img src="../asset/img/ad/mysql.png" alt="mysql Pro" style="width: 100%; height: auto; object-fit: contain;">
+            </a>
+          </p>
+        </div>
+    </div>
+
+    <footer id="myFooter">
+      <div class="w3-container w3-light-green w3-padding-32 w3-center">
+        <h2>Bài tập Mini-project 1</h2>
+      </div>
+      <div class="w3-container w3-theme-d1 w3-padding-16 w3-center">
+        <a href="https://www.facebook.com/w3schoolscom/" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fab fa-facebook-square"></i> Facebook
+        </a>
+        <a id="profile-link" href="https://discord.com/invite/w3schools" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fa-brands fa-discord"></i> Discord
+        </a>
+        <a href="https://www.instagram.com/w3schools.com_official/" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.linkedin.com/company/w3schools.com/" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fa-brands fa-linkedin"></i> Linkedin
+        </a>
+        <a href="https://www.youtube.com/@w3schools" target="_blank" class="w3-button w3-hover-opacity">
+          <i class="fa-brands fa-youtube"></i> Youtube
+        </a>
+      </div>
+    </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
