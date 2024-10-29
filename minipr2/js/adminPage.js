@@ -1,8 +1,6 @@
 const sections = document.querySelectorAll('.w3-top .w3-bar-item');
 const container = document.querySelector('#admin-page .itemcontainer.container'); // Select the itemcontainer div
 
-const navbarLinks = document.querySelectorAll('.w3-top .w3-bar-item');
-
 // Add the default row for "Trang chủ"
 const defaultRow = document.createElement('div');
 defaultRow.className = 'row-item';
@@ -51,6 +49,7 @@ container.appendChild(hr);
 
 //handle event
 container.addEventListener('click', (event) => {
+  const navbarLinks = document.querySelectorAll('.w3-top .w3-bar-item');
   if (event.target.classList.contains('fa-pencil')) {
     const row = event.target.closest('.row-item');
     const text = row.querySelector('.text').textContent.trim();
