@@ -1,5 +1,8 @@
+import adminMenuLeft from './adminMenuLeft.js';
+// import textToSectionId from './sectionMappings.js';
+
 const sections = document.querySelectorAll('.w3-top .w3-bar-item');
-const container = document.querySelector('#admin-page .itemcontainer.container'); // Select the itemcontainer div
+const container = document.querySelector('#admin-menu-top .itemcontainer.container'); // Select the itemcontainer div
 
 // Add the default row for "Trang chủ"
 const defaultRow = document.createElement('div');
@@ -50,6 +53,11 @@ container.appendChild(hr);
 //handle event
 container.addEventListener('click', (event) => {
   const navbarLinks = document.querySelectorAll('.w3-top .w3-bar-item');
+  if (event.target.classList.contains('fa-eye')){
+    const row = event.target.closest('.row-item');
+    const text = row.querySelector('.text').textContent.trim();
+    adminMenuLeft(text);
+  }
   if (event.target.classList.contains('fa-pencil')) {
     const row = event.target.closest('.row-item');
     const text = row.querySelector('.text').textContent.trim();
@@ -75,12 +83,20 @@ container.addEventListener('click', (event) => {
   
       // Add event listener for OK button click
       okButton.addEventListener('click', () => {
+        const oldName = text;
         const newName = inputBox.value.trim();
   
         if (newName) {
           // Update text in navbar and current row
           matchingLink.textContent = newName;
           textElement.textContent = newName;
+
+          // //update in the store
+          // if (textToSectionId[oldName] && oldName!==newName) {
+          //   textToSectionId[newName] = textToSectionId[oldName];
+          //   delete textToSectionId[oldName];
+          // }
+          // console.log(textToSectionId)
         }
   
         // Restore original icons and text after updating
@@ -161,6 +177,10 @@ container.addEventListener('click', (event) => {
         // Insert the anchor after the matchingLink
         if (matchingLink) {
           matchingLink.insertAdjacentElement('afterend', newAnchor);
+        }else if(text == 'Trang chủ'){
+          if (navbarLinks.length > 0) { // Ensure there is at least one link
+            navbarLinks[1].insertAdjacentElement('afterend', newAnchor);
+          }
         }
       }
     })
