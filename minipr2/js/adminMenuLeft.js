@@ -47,6 +47,129 @@ const adminMenuLeft = (text) => {
             }
         }
     });
+    const hr = document.createElement('hr');
+    container.appendChild(hr);
+
+    //handle event
+    container.addEventListener('click', (event) => {
+        const sections = document.querySelectorAll('#mySidebar a')
+        if (event.target.classList.contains('fa-eye')){
+          console.log("hi")
+        }
+
+        if (event.target.classList.contains('fa-pencil')) {
+            const row = event.target.closest('.row-item');
+            const text = row.querySelector('.text').textContent.trim();
+            const textElement = row.querySelector('.text');
+
+            const matchingLink = Array.from(sections).find(section => section.textContent.trim() === text);
+            if (matchingLink) {
+                // Create a textbox and OK button
+                const inputBox = document.createElement('input');
+                inputBox.type = 'text';
+                inputBox.value = text;
+                inputBox.className = 'update-input';
+            
+                const okButton = document.createElement('button');
+                okButton.textContent = 'OK';
+                okButton.className = 'ok-button';
+            
+                // Clear row content and add the textbox and button
+                row.innerHTML = ''; // Clear existing content in the row
+                row.appendChild(inputBox);
+                row.appendChild(okButton);
+
+                // Add event listener for OK button click
+                okButton.addEventListener('click', () => {
+                    const oldName = text;
+                    const newName = inputBox.value.trim();
+            
+                    if (newName) {
+                        // Update text in navbar and current row
+                        matchingLink.textContent = newName;
+                        textElement.textContent = newName;
+                    }
+                    row.innerHTML = `
+                        <span class="text">${newName}</span>
+                        <i class="fa-regular fa-eye icon"></i>
+                        <i class="fa-solid fa-pencil icon"></i>
+                        <i class="fa-thin fa-x icon"></i>
+                        <i class="fa-solid fa-plus icon"></i>
+                        `;
+                });
+            }
+        }
+
+        if (event.target.classList.contains('fa-x')) {
+            const row = event.target.closest('.row-item');
+            const text = row.querySelector('.text').textContent.trim();
+        
+            //delete from navbar-top and current frame
+            const matchingLink = Array.from(sections).find(section => section.textContent.trim() === text);
+            if (matchingLink) {
+              matchingLink.remove(); 
+              const dottedLine = row.previousElementSibling;
+              if (dottedLine && dottedLine.classList.contains('dotted-line')) {
+                dottedLine.remove(); // Remove the dotted line above the row if it exists
+              }
+              row.remove(); //remove the row
+            }
+        }
+
+        if (event.target.classList.contains('fa-plus')) {
+            const row = event.target.closest('.row-item');
+            const text = row.querySelector('.text').textContent.trim();
+            //find on navbar-top
+            const matchingLink = Array.from(sections).find(section => section.textContent.trim() === text);
+            // Create a new row for the textbox and button
+            const newRow = document.createElement('div');
+            newRow.className = 'row-item';
+        
+            // Create a textbox and OK button
+            const inputBox = document.createElement('input');
+            inputBox.type = 'text';
+            inputBox.className = 'update-input';
+        
+            const okButton = document.createElement('button');
+            okButton.textContent = 'OK';
+            okButton.className = 'ok-button';
+        
+            newRow.appendChild(inputBox);
+            newRow.appendChild(okButton);
+        
+            const newDottedLine = document.createElement('div');
+            newDottedLine.className = 'dotted-line';
+        
+            // Insert 
+            row.insertAdjacentElement('afterend', newDottedLine);
+            newDottedLine.insertAdjacentElement('afterend', newRow);
+        
+            //submit new name
+            okButton.addEventListener('click', () => {
+              const newName = inputBox.value.trim();
+              if (newName) {
+                newRow.innerHTML = `
+                  <span class="text">${newName}</span>
+                  <i class="fa-regular fa-eye icon"></i>
+                  <i class="fa-solid fa-pencil icon"></i>
+                  <i class="fa-thin fa-x icon"></i>
+                  <i class="fa-solid fa-plus icon"></i>
+                `;
+        
+                // Create a new anchor element
+                const newAnchor = document.createElement('a');
+                newAnchor.href = "";
+                newAnchor.className = 'w3-bar-item w3-button w3-hover-black';
+                newAnchor.textContent = newName; // Set the link text
+        
+                // Insert the anchor after the matchingLink
+                if (matchingLink) {
+                  matchingLink.insertAdjacentElement('afterend', newAnchor);
+                }
+              }
+            })
+          }
+    })
 };
 
 export default adminMenuLeft;
@@ -62,8 +185,10 @@ function getSectionIdFromText(text) {
         }
     }
     return null; // Return null if no match is found
-}
-function updateSidebar(sectionId) {
+  }
+
+  
+  function updateSidebar(sectionId) {
     const sidebar = document.getElementById("mySidebar");
     sidebar.innerHTML = ''; // Clear existing sidebar content
   

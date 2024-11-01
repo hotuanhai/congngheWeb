@@ -82,3 +82,5 @@ function showContent(sectionId) {
 window.onload = function () {
   showContent('courseInfo');
 };
+
+
