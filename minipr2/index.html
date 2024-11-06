@@ -64,28 +64,23 @@
       <div class="container">
         <div id="classInfo">
           <div class="section-header">Thông tin khai giảng</div>
-          <table class="table-info">
-            <tr>
-              <th>Thứ</th>
-              <td>Thứ 6 </td>
-            </tr>
-            <tr>
-              <th>Thời gian/Tiết</th>
-              <td>Từ 3 đến 6</td>
-            </tr>
-            <tr>
-              <th>Ngày/Tuần</th>
-              <td>2-9,11-18</td>
-            </tr>
-            <tr>
-              <th>Tại địa điểm</th>
-              <td>D9-501</td>
-            </tr>
-          </table>
+          <div class="grid-info">
+            <div class="grid-item grid-header">Thứ</div>
+            <div class="grid-item">Thứ 6</div>
+            
+            <div class="grid-item grid-header">Thời gian/Tiết</div>
+            <div class="grid-item">Từ 3 đến 6</div>
+            
+            <div class="grid-item grid-header">Ngày/Tuần</div>
+            <div class="grid-item">2-9,11-18</div>
+            
+            <div class="grid-item grid-header">Tại địa điểm</div>
+            <div class="grid-item">D9-501</div>
+          </div>
         </div>
         <div id="seminar">
           <div class="section-header" style="margin-top: 20px;">Thông tin seminar</div>
-          <table class="table-info">
+          <!-- <table class="table-info">
             <tr>
               <th>Mã lớp</th>
               <td>151900</td>
@@ -114,13 +109,35 @@
               <th>Hình thức GD</th>
               <td>Offline</td>
             </tr>
-          </table>
+          </table> -->
+          <div class="grid-info">
+            <div class="grid-item grid-header">Mã lớp</div>
+            <div class="grid-item">151900</div>
+            
+            <div class="grid-item grid-header">Loại hình</div>
+            <div class="grid-item">LT+BT</div>
+            
+            <div class="grid-item grid-header">Hệ</div>
+            <div class="grid-item">HEDSPI</div>
+            
+            <div class="grid-item grid-header">GVHD</div>
+            <div class="grid-item">Phạm Huy Hoàng</div>
+            
+            <div class="grid-item grid-header">Số lần vắng</div>
+            <div class="grid-item">0</div>
+            
+            <div class="grid-item grid-header">Số sinh viên</div>
+            <div class="grid-item">150</div>
+            
+            <div class="grid-item grid-header">Hình thức GD</div>
+            <div class="grid-item">Offline</div>
+          </div>
         </div>
         <div id="company">
           <div class="section-header" style="margin-top: 20px;">Thông tin công ty quan tâm</div>
-          <div style="display: flex; justify-content: space-between;">
+          <div class="grid-container">
             <!-- Nội dung bên trái -->
-            <div style="flex: 2; margin-right: 30px;">
+            <div class="text-content" style="grid-column: span 7;">
               <ul>
                 <li><strong>Công ty:</strong> FPT Software</li>
               </ul>
@@ -134,15 +151,11 @@
                 đối tác lớn như Hitachi, NEOPOST, Petronas, Deutsche Bank, và Unilever với hơn 4000 nhân viên trên toàn
                 thế giới. </p>
 
-
-
               <p>FPT Software theo đuổi mục tiêu gia công phần mềm để đáp ứng cho nhu cầu phát triển CNTT của các hãng
                 phần
                 mềm trong nước, các công ty lớn trong nước và tham vọng hơn là xuất khẩu phần mềm trên toàn thế giới cho
                 các công ty nước ngoài biết đến tập đoàn FPT, mục đích chính là vươn đến tầm cao mới thông qua công nghệ
                 nhằm nâng cao năng suất lao động.</p>
-
-
 
               <p>Kinh doanh của FPT Software xuất phát từ Công nghệ thông tin và Viễn Thông FPT là cốt lõi để đáp ứng
                 cho
@@ -153,19 +166,19 @@
                 CNTT. Ở lĩnh vực Viễn Thông FPT là một trong 3 nhà cung cấp dịch vụ internet cáp quang FPT hàng đầu tại
                 Việt Nam. Về lĩnh vực quảng cáo, FPT là đơn vị quảng cáo trực tuyến số 1 tại Việt Nam với trang báo điện
                 tử VNexpress với hơn 42 triệu lượt truy cập mỗi ngày.</p>
-
             </div>
-
+          
             <!-- Quảng cáo bên phải -->
-            <a href="https://fptsoftware.com/" target="_blank" style="flex: 1; margin-top: 20px;">
+            <a href="https://fptsoftware.com/" target="_blank" class="ad-content" style="grid-column: span 3;">
               <div class="FRB" style="width: 100%;">
                 <img class="DRB"
                   src="http://itde.hvnh.edu.vn/public/img/news/files/FPT%20tuy%E1%BB%83n%20d%E1%BB%A5ng%20(2).jpg"
                   style="width: 100%;">
-                <div class="ERB" style="width: 100%;color: blue" title="">FPT SOFTWARE TUYỂN DỤNG</div>
+                <div class="ERB" style="width: 100%; color: blue;">FPT SOFTWARE TUYỂN DỤNG</div>
               </div>
             </a>
           </div>
+          
         </div>
       </div>
     </div>
@@ -329,104 +342,90 @@
                         </select>
                       </div>
                     </div>
-
-                    <div id="summaryVN">
-                      <div style="width: 100%;">&nbsp;
-                        <hr>
-                      </div>
-                      <div> <label><strong>Mô tả tóm tắt học phần (tiếng Việt)</strong>
-                          (*)</label>
-                      </div>
-                      <p><strong>Mục tiêu: </strong>Học phần cung cấp các kiến thức cần thiết để xây dựng và phát
-                        triển
-                        các ứng dụng, dịch vụ trực
-                        tuyến trên môi trường web. Sau khi học xong học phần này, sinh viên có khả năng:
-                      <ul>
-                        <li>Có thể sử dụng một ngôn ngữ lập trình như JSP, PHP để phát triển ứng dụng web cho các
-                          lĩnh
-                          vực khác nhau như: hệ quản trị nội dung (CMS), cổng thông tin (Portal), hay các ứng dụng
-                          điện
-                          tử (eCommerce, eLearning, eGoverment,…)</li>
-                        <li>Nắm vững được các công nghệ web, các platform, framework hiện đang thịnh hành.</li>
-                      </ul>
-                      Ngoài ra học phần cũng cung cấp cho sinh viên các kỹ năng làm việc nhóm, thuyết trình và thái
-                      độ
-                      cần thiết để làm việc và ứng dụng các kỹ thuật trong các dự án, công ty về phần mềm sau này.
-                      </p>
-                    </div>
-                    <div id="summaryEN">
-                      <div style="width: 100%;">&nbsp;
-                        <hr>
-                      </div>
-                      <div> <label><strong>Mô tả tóm tắt học phần (tiếng
-                            Anh)</strong>
-                          (*)</label>
-                      </div>
-                      <p><strong>Objectives:</strong>
-                        The course provides students with the necessary knowledge to build and develop online
-                        applications and services on the web environment. After completing this couse, students are
-                        able
-                        to:
-                      <ul>
-                        <li>Use a programming language such as JSP, PHP to develop web applications for different
-                          areas
-                          such as content management system (CMS), portal, or online applications (eCommerce,
-                          eLearning,
-                          eGoverment, ...)</li>
-                        <li>Understand the popular web technologies, platforms, frameworks.</li>
-                      </ul>
-                      In addition, the course also provides students with skills of teamwork and presentation, and
-                      attitudes needed to work and apply the techniques in software projects and companies in the
-                      future.</p>
-                    </div>
-
-                    <div id="contentVN">
-                      <div style="width: 100%;">&nbsp;
-                        <hr>
-                      </div>
-                      <div> <label><strong>Nội dung tóm tắt của học phần (tiếng
-                            Việt)</strong>
-                          (*)</label> </div>
-                      <div>
-                        <p>Internet, web, kiến trúc ứng dụng web,&nbsp; HTML, CSS, Javascript, PHP, JSP, Ajax,
-                          DOM, XML,
-                          SOA, An toàn bảo mật web, v.v.</p>
-                      </div>
-                    </div>
-                    <div id="contentEN">
-                      <div style="width: 100%;">&nbsp;
-                        <hr>
-                      </div>
-                      <div> <label><strong>Nội dung tóm tắt của học phần (tiếng
-                            Anh)</strong>
-                          (*)</label> </div>
-                      <div>
-                        <p>Internet, web, architecture of web
-                          application,&nbsp; HTML, CSS, Javascript, PHP, JSP, Ajax, DOM, XML, SOA,&nbsp;website
-                          security</a>,
-                          etc.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div id="reference">
-                    <div style="width: 100%;">&nbsp;
-                      <hr>
-                    </div>
-                    <div> <label><strong>Sách tham khảo</strong></label> </div>
-                    <div style="display: flex; justify-content: space-between;">
-                      <div style="flex: 2; margin-right: 30px;">
-                        <p>Sách Web Technologies: HTML, Javascript, PHP, Java, Jsp, XML and Ajax, Black Book</p>
-                      </div>
-                      <a href="https://www.amazon.com/Web-Technologies-HTML-Javascript-Black/dp/8177229974"
-                        target="_blank" style="flex: 1;margin-top: 20px;">
-                        <div class="FRB" style="width: 100%;">
-                          <img class="DRB" src="https://m.media-amazon.com/images/I/71t58FV+qFL._SY466_.jpg"
-                            style="width: 100%;">
-                          <div class="ERB" style="width: 100%;color: blue" title="">Web Technologies: HTML,
-                            Javascript, PHP, Java, Jsp, XML and Ajax, Black Book</div>
+                    
+                    <div class="grid-container">
+                      <div class="grid-item-forText" style="grid-row: span 1;padding: 0px;">
+                        <div style="width: 100%;">&nbsp;
+                          <hr>
                         </div>
-                      </a>
+                        <div id="summaryVN">              
+                          <div> 
+                            <label><strong>Mô tả tóm tắt học phần (tiếng Việt)</strong>(*)</label>
+                          </div>
+                          <p><strong>Mục tiêu:</strong> Học phần cung cấp các kiến thức cần thiết để xây dựng và phát triển các ứng dụng, dịch vụ trực tuyến trên môi trường web. Sau khi học xong học phần này, sinh viên có khả năng:
+                            <ul>
+                              <li>Có thể sử dụng một ngôn ngữ lập trình như JSP, PHP để phát triển ứng dụng web cho các lĩnh vực khác nhau như: hệ quản trị nội dung (CMS), cổng thông tin (Portal), hay các ứng dụng điện tử (eCommerce, eLearning, eGoverment,…)</li>
+                              <li>Nắm vững được các công nghệ web, các platform, framework hiện đang thịnh hành.</li>
+                            </ul>
+                            Ngoài ra học phần cũng cung cấp cho sinh viên các kỹ năng làm việc nhóm, thuyết trình và thái độ cần thiết để làm việc và ứng dụng các kỹ thuật trong các dự án, công ty về phần mềm sau này.
+                          </p>              
+                        </div>
+                      </div>
+                      <div class="grid-item-forText" style="grid-row: span 1;padding: 0px;">
+                        <div style="width: 100%;">&nbsp;
+                          <hr>
+                        </div>
+                        <div id="summaryEN">                
+                          <div>
+                            <label><strong>Mô tả tóm tắt học phần (tiếng Anh)</strong>(*)</label>
+                          </div>
+                          <p><strong>Objectives:</strong> The course provides students with the necessary knowledge to build and develop online applications and services on the web environment. After completing this course, students are able to:
+                            <ul>
+                              <li>Use a programming language such as JSP, PHP to develop web applications for different areas such as content management system (CMS), portal, or online applications (eCommerce, eLearning, eGoverment, ...)</li>
+                              <li>Understand popular web technologies, platforms, frameworks.</li>
+                            </ul>
+                            In addition, the course also provides students with skills of teamwork and presentation, and attitudes needed to work and apply the techniques in software projects and companies in the future.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="grid-item-forText" style="grid-row: span 1;padding: 0px;">
+                        <div style="width: 100%;">&nbsp;
+                          <hr>
+                        </div>
+                        <div id="contentVN">
+                          <div> 
+                            <label><strong>Nội dung tóm tắt của học phần (tiếng Việt)</strong>(*)</label> 
+                          </div>
+                          <p>Internet, web, kiến trúc ứng dụng web,&nbsp; HTML, CSS, Javascript, PHP, JSP, Ajax,
+                              DOM, XML,SOA, An toàn bảo mật web, v.v.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="grid-item-forText" style="grid-row: span 1;padding: 0px;">
+                        <div style="width: 100%;">&nbsp;
+                          <hr>
+                        </div>
+                        <div id="contentEN">   
+                          <div> 
+                            <label><strong>Nội dung tóm tắt của học phần (tiếng Anh)</strong>(*)</label> 
+                          </div>
+                          <p>Internet, web, architecture of web
+                            application,&nbsp; HTML, CSS, Javascript, PHP, JSP, Ajax, DOM, XML, SOA,&nbsp;website
+                            security</a>,etc.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div class="grid-item-forText" style="grid-row: span 1;padding: 0px;">
+                        <div style="width: 100%;">&nbsp;
+                          <hr>
+                        </div>
+                        <div id="reference" class="grid-container">                   
+                          <div class="text-content" >
+                            <div> <label><strong>Sách tham khảo</strong></label> </div>                                         
+                            <p>Sách Web Technologies: HTML, Javascript, PHP, Java, Jsp, XML and Ajax, Black Book</p>
+                          </div>
+                          <a href="https://www.amazon.com/Web-Technologies-HTML-Javascript-Black/dp/8177229974"
+                              target="_blank" class="ad-content" style="flex: 1;margin-top: 20px;" >
+                            <div class="FRB" style="width: 100%;">
+                              <img class="DRB" src="https://m.media-amazon.com/images/I/71t58FV+qFL._SY466_.jpg"
+                                  style="width: 100%;">
+                              <div class="ERB" style="width: 100%;color: blue" title="">Web Technologies: HTML,
+                                Javascript, PHP, Java, Jsp, XML and Ajax, Black Book</div>
+                            </div>
+                          </a>                    
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </td>
@@ -443,115 +442,106 @@
       <div class="container">
         <div class="header">Các công nghệ web</div>
         <p>Dưới đây là các công nghệ phổ biến được sử dụng trong xây dựng ứng dụng Web:</p>
-        <div id="frontend">
-          <h3>1. Frontend (Giao diện người dùng)</h3>
-          <ul>
-            <li><strong>HTML, CSS, JavaScript</strong>: Các công nghệ cơ bản để xây dựng cấu trúc và giao diện người
-              dùng.
-            </li>
-            <li><strong>ReactJS</strong>: Thư viện JavaScript để xây dựng giao diện người dùng động.</li>
-            <li><strong>Angular</strong>: Framework JavaScript mạnh mẽ cho các ứng dụng Web quy mô lớn.</li>
-            <li><strong>Vue.js</strong>: Framework linh hoạt giúp phát triển giao diện người dùng hiệu quả.</li>
-            <li><strong>CSS Preprocessors (SASS, LESS)</strong>: Giúp cải thiện mã CSS với các tính năng như biến và
-              hàm.
-            </li>
-            <li><strong>Responsive Design</strong>: Thiết kế giao diện phù hợp với mọi kích thước màn hình (sử dụng
-              Bootstrap, Tailwind CSS).</li>
-          </ul>
+        
+        <div class="grid-container">
+          <div class="grid-item-forText" id="frontend" style="grid-row: span 1;padding: 0px;">
+            <h3>1. Frontend (Giao diện người dùng)</h3>
+            <ul>
+              <li><strong>HTML, CSS, JavaScript</strong>: Các công nghệ cơ bản để xây dựng cấu trúc và giao diện người dùng.</li>
+              <li><strong>ReactJS</strong>: Thư viện JavaScript để xây dựng giao diện người dùng động.</li>
+              <li><strong>Angular</strong>: Framework JavaScript mạnh mẽ cho các ứng dụng Web quy mô lớn.</li>
+              <li><strong>Vue.js</strong>: Framework linh hoạt giúp phát triển giao diện người dùng hiệu quả.</li>
+              <li><strong>CSS Preprocessors (SASS, LESS)</strong>: Giúp cải thiện mã CSS với các tính năng như biến và hàm.</li>
+              <li><strong>Responsive Design</strong>: Thiết kế giao diện phù hợp với mọi kích thước màn hình (sử dụng Bootstrap, Tailwind CSS).</li>
+            </ul>
+          </div>
+        
+          <div class="grid-item-forText" id="backend" style="grid-row: span 1;padding: 0px;">
+            <h3>2. Backend (Máy chủ và xử lý dữ liệu)</h3>
+            <ul>
+              <li><strong>Node.js</strong>: Môi trường runtime JavaScript hiệu quả cho ứng dụng Web.</li>
+              <li><strong>Express.js</strong>: Framework giúp xây dựng API và xử lý các yêu cầu HTTP nhanh chóng.</li>
+              <li><strong>Django (Python)</strong>: Framework Python phù hợp cho các ứng dụng Web cần bảo mật cao.</li>
+              <li><strong>Ruby on Rails</strong>: Framework giúp phát triển ứng dụng Web nhanh chóng và dễ dàng bảo trì.
+              </li>
+              <li><strong>Java Spring Boot</strong>: Framework mạnh mẽ cho ứng dụng Web Java với khả năng mở rộng cao.
+              </li>
+            </ul>
+          </div>
+        
+          <div class="grid-item-forText" id="database" style="grid-row: span 1;padding: 0px;">
+            <h3>3. Cơ sở dữ liệu</h3>
+            <ul>
+              <li><strong>MySQL</strong>: Cơ sở dữ liệu quan hệ phổ biến.</li>
+              <li><strong>PostgreSQL</strong>: Cơ sở dữ liệu mạnh mẽ hỗ trợ truy vấn phức tạp.</li>
+              <li><strong>MongoDB</strong>: Cơ sở dữ liệu NoSQL linh hoạt cho dữ liệu phi cấu trúc.</li>
+              <li><strong>Cassandra</strong>: Cơ sở dữ liệu NoSQL phân tán phù hợp cho dữ liệu lớn.</li>
+            </ul>
+          </div>
+        
+          <div class="grid-item-forText" id="api" style="grid-row: span 1;padding: 0px;">
+            <h3>4. API và Tích hợp dịch vụ</h3>
+            <ul>
+              <li><strong>RESTful APIs</strong>: Phương thức phổ biến để giao tiếp giữa các hệ thống qua HTTP.</li>
+              <li><strong>GraphQL</strong>: Công nghệ API mạnh mẽ giúp lấy dữ liệu theo yêu cầu.</li>
+              <li><strong>WebSockets</strong>: Giải pháp cho các ứng dụng thời gian thực.</li>
+            </ul>
+          </div>
+        
+          <div class="grid-item-forText" id="devops" style="grid-row: span 1;padding: 0px;">
+            <h3>5. DevOps và Triển khai</h3>
+            <ul>
+              <li><strong>Docker</strong>: Giải pháp đóng gói ứng dụng và môi trường vào container.</li>
+              <li><strong>CI/CD</strong>: Tự động hóa quy trình kiểm thử và triển khai (Jenkins, GitLab CI, GitHub Actions).</li>
+              <li><strong>AWS, Azure, Google Cloud</strong>: Các dịch vụ đám mây linh hoạt cho phát triển và triển khai ứng dụng Web.</li>
+            </ul>
+          </div>
+        
+          <div class="grid-item-forText" id="security" style="grid-row: span 1;padding: 0px;">
+            <h3>6. Bảo mật</h3>
+            <ul>
+              <li><strong>OAuth2 & JWT</strong>: Cơ chế xác thực và phân quyền người dùng an toàn.</li>
+              <li><strong>HTTPS</strong>: Đảm bảo giao tiếp an toàn qua mã hóa SSL/TLS.</li>
+              <li><strong>Helmet.js</strong>: Thư viện Node.js tăng cường bảo mật HTTP header.</li>
+            </ul>
+          </div>
+        
+          <div class="grid-item-forText" id="testing" style="grid-row: span 1;padding: 0px;">
+            <h3>7. Testing và Debugging</h3>
+            <ul>
+              <li><strong>Jest</strong>: Công cụ kiểm thử JavaScript, thường dùng với React và Node.js.</li>
+              <li><strong>Mocha & Chai</strong>: Framework kiểm thử cho Node.js.</li>
+              <li><strong>Cypress</strong>: Công cụ kiểm thử tích hợp mạnh mẽ cho các ứng dụng Web.</li>
+              <li><strong>Postman</strong>: Công cụ kiểm thử API và làm việc với RESTful API.</li>
+            </ul>
+          </div>
+        
+          <div class="grid-item-forText" id="optimization" style="grid-row: span 1;padding: 0px;">
+            <h3>8. Performance Optimization</h3>
+            <ul>
+              <li><strong>Lazy Loading</strong>: Tải tài nguyên theo yêu cầu để cải thiện tốc độ tải trang.</li>
+              <li><strong>CDN (Content Delivery Network)</strong>: Mạng phân phối nội dung giúp giảm độ trễ và cải thiện tốc độ.</li>
+              <li><strong>Caching</strong>: Sử dụng Redis hoặc Memcached để lưu trữ dữ liệu tạm thời và giảm tải cho server.</li>
+            </ul>
+          </div>
+        
+          <div class="grid-item-forText" id="authentication" style="grid-row: span 1;padding: 0px;">
+            <h3>9. User Authentication & Authorization</h3>
+            <ul>
+              <li><strong>Firebase Authentication</strong>: Dịch vụ đăng nhập thông qua Google, Facebook, email/password.
+              </li>
+              <li><strong>Auth0</strong>: Dịch vụ bảo mật giúp quản lý xác thực và phân quyền người dùng dễ dàng.</li>
+            </ul>
+          
+            <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">
+              <img width="100%"
+                src="https://www.shutterstock.com/shutterstock/photos/1854050815/display_1500/stock-vector-abstract-technology-horizontal-motion-style-concept-particle-connection-background-design-with-red-1854050815.jpg"
+                alt="">
+              <p style="color: blue;">
+                Các công nghệ web</p>
+            </a>
+          </div>
         </div>
-
-        <div id="backend">
-          <h3>2. Backend (Máy chủ và xử lý dữ liệu)</h3>
-          <ul>
-            <li><strong>Node.js</strong>: Môi trường runtime JavaScript hiệu quả cho ứng dụng Web.</li>
-            <li><strong>Express.js</strong>: Framework giúp xây dựng API và xử lý các yêu cầu HTTP nhanh chóng.</li>
-            <li><strong>Django (Python)</strong>: Framework Python phù hợp cho các ứng dụng Web cần bảo mật cao.</li>
-            <li><strong>Ruby on Rails</strong>: Framework giúp phát triển ứng dụng Web nhanh chóng và dễ dàng bảo trì.
-            </li>
-            <li><strong>Java Spring Boot</strong>: Framework mạnh mẽ cho ứng dụng Web Java với khả năng mở rộng cao.
-            </li>
-          </ul>
-        </div>
-
-        <div id="database">
-          <h3>3. Cơ sở dữ liệu</h3>
-          <ul>
-            <li><strong>MySQL</strong>: Cơ sở dữ liệu quan hệ phổ biến.</li>
-            <li><strong>PostgreSQL</strong>: Cơ sở dữ liệu mạnh mẽ hỗ trợ truy vấn phức tạp.</li>
-            <li><strong>MongoDB</strong>: Cơ sở dữ liệu NoSQL linh hoạt cho dữ liệu phi cấu trúc.</li>
-            <li><strong>Cassandra</strong>: Cơ sở dữ liệu NoSQL phân tán phù hợp cho dữ liệu lớn.</li>
-          </ul>
-        </div>
-
-        <div id="api">
-          <h3>4. API và Tích hợp dịch vụ</h3>
-          <ul>
-            <li><strong>RESTful APIs</strong>: Phương thức phổ biến để giao tiếp giữa các hệ thống qua HTTP.</li>
-            <li><strong>GraphQL</strong>: Công nghệ API mạnh mẽ giúp lấy dữ liệu theo yêu cầu.</li>
-            <li><strong>WebSockets</strong>: Giải pháp cho các ứng dụng thời gian thực.</li>
-          </ul>
-        </div>
-
-        <div id="devops">
-          <h3>5. DevOps và Triển khai</h3>
-          <ul>
-            <li><strong>Docker</strong>: Giải pháp đóng gói ứng dụng và môi trường vào container.</li>
-            <li><strong>CI/CD</strong>: Tự động hóa quy trình kiểm thử và triển khai (Jenkins, GitLab CI, GitHub
-              Actions).
-            </li>
-            <li><strong>AWS, Azure, Google Cloud</strong>: Các dịch vụ đám mây linh hoạt cho phát triển và triển khai
-              ứng
-              dụng Web.</li>
-          </ul>
-        </div>
-
-        <div id="security"></div>
-        <h3>6. Bảo mật</h3>
-        <ul>
-          <li><strong>OAuth2 & JWT</strong>: Cơ chế xác thực và phân quyền người dùng an toàn.</li>
-          <li><strong>HTTPS</strong>: Đảm bảo giao tiếp an toàn qua mã hóa SSL/TLS.</li>
-          <li><strong>Helmet.js</strong>: Thư viện Node.js tăng cường bảo mật HTTP header.</li>
-        </ul>
-
-        <div id="testing">
-          <h3>7. Testing và Debugging</h3>
-          <ul>
-            <li><strong>Jest</strong>: Công cụ kiểm thử JavaScript, thường dùng với React và Node.js.</li>
-            <li><strong>Mocha & Chai</strong>: Framework kiểm thử cho Node.js.</li>
-            <li><strong>Cypress</strong>: Công cụ kiểm thử tích hợp mạnh mẽ cho các ứng dụng Web.</li>
-            <li><strong>Postman</strong>: Công cụ kiểm thử API và làm việc với RESTful API.</li>
-          </ul>
-        </div>
-
-        <div id="optimization">
-          <h3>8. Performance Optimization</h3>
-          <ul>
-            <li><strong>Lazy Loading</strong>: Tải tài nguyên theo yêu cầu để cải thiện tốc độ tải trang.</li>
-            <li><strong>CDN (Content Delivery Network)</strong>: Mạng phân phối nội dung giúp giảm độ trễ và cải thiện
-              tốc
-              độ.</li>
-            <li><strong>Caching</strong>: Sử dụng Redis hoặc Memcached để lưu trữ dữ liệu tạm thời và giảm tải cho
-              server.
-            </li>
-          </ul>
-        </div>
-
-        <div id="authentication">
-          <h3>9. User Authentication & Authorization</h3>
-          <ul>
-            <li><strong>Firebase Authentication</strong>: Dịch vụ đăng nhập thông qua Google, Facebook, email/password.
-            </li>
-            <li><strong>Auth0</strong>: Dịch vụ bảo mật giúp quản lý xác thực và phân quyền người dùng dễ dàng.</li>
-          </ul>
-        </div>
-        <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">
-          <img width="100%"
-            src="https://www.shutterstock.com/shutterstock/photos/1854050815/display_1500/stock-vector-abstract-technology-horizontal-motion-style-concept-particle-connection-background-design-with-red-1854050815.jpg"
-            alt="">
-          <p style="color: blue;">
-            Các công nghệ web</p>
-        </a>
-
       </div>
     </div>
     <!-- Section 4: Thông tin sinh viên -->
@@ -671,9 +661,15 @@
         <script type="module" src="./js/adminPage.js"></script>
       </div>
       <div id="admin-menu-left" class="container hidden" >
-        <h3>Admin menu left: Chỉnh sửa menu top</h3>
+        <h3>Admin menu left: Chỉnh sửa menu left</h3>
         <div class="itemcontainer container"></div>
         <script type="module" src="./js/adminPage.js"></script>
+      </div>
+      <div id="admin-content-layout" class="container hidden" >
+        <h3>Admin menu left: Chỉnh sửa content layout</h3>
+        <div class="itemcontainer container"></div>
+        <script type="module" src="./js/adminContentLayout.js"></script>
+        <div class="preview-content"></div>
       </div>
     </div>
   </div>

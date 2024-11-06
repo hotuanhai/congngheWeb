@@ -1,6 +1,8 @@
+import adminContentLayout from "./adminContentLayout.js";
+import resetStudentInfo from "./resetStudentInfo.js"
+
 const adminMenuLeft = (text) => {
-    console.log("Received text:", text);
-    const navbarLinks = document.querySelectorAll('.w3-top .w3-bar-item');
+    //console.log("Received text:", text);
 
     //display the admin menu left , hidden the admin menu top
     document.getElementById("admin-menu-top").classList.add("hidden");
@@ -8,6 +10,15 @@ const adminMenuLeft = (text) => {
     adminMenuLeftElement.classList.remove("hidden")
     const adminMenuLeftHeading = adminMenuLeftElement.querySelector("h3");
     adminMenuLeftHeading.textContent = `Admin menu left: Chỉnh sửa "${text}"`;
+    if(text === 'Thông tin sinh viên'){
+      adminMenuLeftHeading.innerHTML += `<i class="fa-solid fa-rotate-left" style="padding-left: 18px;"></i>`
+      adminMenuLeftHeading.onclick = () => {
+        if (adminMenuLeftHeading.querySelector('.fa-rotate-left')) {
+            resetStudentInfo();
+            updateStudentInfoContent()
+        }
+    }
+    }
     //set id base on the navbar-top name
     let id
     if (text === "Trang chủ") {
@@ -16,10 +27,10 @@ const adminMenuLeft = (text) => {
         id = getSectionIdFromText(text)
     }
     if(id) updateSidebar(id)
-    console.log(id)
+    //console.log(id)
 
     const sections = document.querySelectorAll('#mySidebar a')
-    console.log(sections)
+    //console.log(sections)
     const container = adminMenuLeftElement.querySelector('.container')
 
     // Clear previous items in the container before adding new ones
@@ -51,10 +62,21 @@ const adminMenuLeft = (text) => {
     container.appendChild(hr);
 
     //handle event
+    const sidebar = document.getElementById("mySidebar");
+    sidebar.addEventListener('click', (event) => {
+      if (event.target.classList.contains('w3-bar-item')) {
+        const clickedText = event.target.textContent.trim()
+        adminContentLayout(text, clickedText)
+      }
+    })
+
     container.addEventListener('click', (event) => {
         const sections = document.querySelectorAll('#mySidebar a')
         if (event.target.classList.contains('fa-eye')){
-          console.log("hi")
+          const row = event.target.closest('.row-item'); 
+          const rowText = row.querySelector('.text').textContent.trim(); 
+          // (page,section) = (text, rowText)
+          adminContentLayout(text, rowText);
         }
 
         if (event.target.classList.contains('fa-pencil')) {
@@ -231,3 +253,38 @@ function getSectionIdFromText(text) {
       `;
     }
   }
+
+function updateStudentInfoContent(){
+  const adminMenuLeftElement = document.getElementById("admin-menu-left")
+  const sections = document.querySelectorAll('#mySidebar a')
+    //console.log(sections)
+    const container = adminMenuLeftElement.querySelector('.container')
+
+    // Clear previous items in the container before adding new ones
+    container.innerHTML = '';
+
+    sections.forEach((section, index) => {
+        if (section.textContent.trim() !== 'Admin Page' && section.innerText.trim() !== '') {
+            // Create a row element for each section
+            const row = document.createElement('div');
+            row.className = 'row-item';
+            row.innerHTML = `
+                <span class="text">${section.textContent.trim()}</span>
+                <i class="fa-regular fa-eye icon"></i>
+                <i class="fa-solid fa-pencil icon"></i>
+                <i class="fa-thin fa-x icon"></i>
+                <i class="fa-solid fa-plus icon"></i>
+            `;
+            container.appendChild(row);
+
+            // Add a dotted line separator except after the last item
+            if (index < sections.length - 1) {
+                const dottedLine = document.createElement('div');
+                dottedLine.className = 'dotted-line';
+                container.appendChild(dottedLine);
+            }
+        }
+    });
+    const hr = document.createElement('hr');
+    container.appendChild(hr);
+}

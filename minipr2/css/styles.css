@@ -175,3 +175,102 @@ body {
   vertical-align: middle; /* Ensures icons are aligned */
   cursor: pointer; /* Adds pointer cursor for clarity */
 }
+
+.preview-content{
+  margin-top: 20px;
+  border: 2px dotted red;
+}
+
+
+/* set grid layout */
+.admin-content-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columns */
+  grid-template-rows: repeat(10, 1fr); /* 10 rows */
+  gap: 5px;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* .grid-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9em;
+}
+.grid-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.grid-header {
+  font-weight: bold;
+} */
+.grid-info {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Creates 10 equal columns */
+  grid-auto-rows: minmax(50px, auto); /* Sets each row to a minimum height */
+  width: 100%;
+  gap: 0; /* No gap between items */
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.grid-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  box-sizing: border-box;
+  grid-column: span 5; /* Each item spans 5 columns */
+}
+
+.grid-header {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+/* //for text part */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 equal columns */
+  gap: 10px; /* Add space between items */
+  width: 100%;
+}
+
+.grid-item-forText {
+  box-sizing: border-box;
+  grid-column: span 10; /* Spans all 10 columns */
+  padding: 10px;
+}
+
+.text-content {
+  box-sizing: border-box;
+  grid-column: span 7; /* Occupies 7 columns */
+  padding: 10px;
+}
+
+.ad-content {
+  box-sizing: border-box;
+  grid-column: span 3; /* Occupies 3 columns */
+  margin-top: 20px;
+}
+
+.FRB {
+  width: 100%;
+}
+
+.DRB {
+  width: 100%;
+}
+
+.ERB {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}

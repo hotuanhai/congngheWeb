@@ -67,13 +67,25 @@ function showContent(sectionId) {
     <a class="w3-bar-item w3-button w3-hover-black" href="#authentication">9. User Authentication & Authorization</a>
   `;
   } else if (sectionId === 'student-info') {
-    sidebar.innerHTML = `
-    <h4 class="w3-bar-item"><b>Thông tin sinh viên</b></h4>
-    <a class="w3-bar-item w3-button w3-hover-black" href="#academic-info">Thông tin học tập</a>
-    <a class="w3-bar-item w3-button w3-hover-black" href="#skills-info">Kĩ năng</a>
-    <a class="w3-bar-item w3-button w3-hover-black" href="#projects-info">Dự án</a>
-    <a class="w3-bar-item w3-button w3-hover-black" href="#hobbies-info">Sở thích</a>
-  `;
+    var isReset = document.getElementById("student-info").querySelector("#social-life") ? true:false
+    console.log(isReset)
+    if(!isReset){
+      sidebar.innerHTML = `
+        <h4 class="w3-bar-item"><b>Thông tin sinh viên</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#academic-info">Thông tin học tập</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#skills-info">Kĩ năng</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#projects-info">Dự án</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#hobbies-info">Sở thích</a>
+    `;
+    }else{
+      sidebar.innerHTML = `
+        <h4 class="w3-bar-item"><b>Thông tin sinh viên</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#cv">Curriculum vitae (CV)</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#project">Các dự án đã tham gia</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#social-life">Hoạt động cộng đồng</a>
+      `
+    }
+    
   }
 
   // Add active class to clicked button
