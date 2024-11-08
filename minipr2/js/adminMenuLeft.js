@@ -103,14 +103,14 @@ const adminMenuLeft = (text) => {
 
                 // Add event listener for OK button click
                 okButton.addEventListener('click', () => {
-                    const oldName = text;
-                    const newName = inputBox.value.trim();
-            
-                    if (newName) {
-                        // Update text in navbar and current row
-                        matchingLink.textContent = newName;
-                        textElement.textContent = newName;
-                    }
+                  const oldName = text;
+                  const newName = inputBox.value.trim();
+        
+                  if (newName) {
+                    // Update text in navbar and current row
+                    matchingLink.textContent = newName;
+                    textElement.textContent = newName;
+                  
                     row.innerHTML = `
                         <span class="text">${newName}</span>
                         <i class="fa-regular fa-eye icon"></i>
@@ -118,6 +118,7 @@ const adminMenuLeft = (text) => {
                         <i class="fa-thin fa-x icon"></i>
                         <i class="fa-solid fa-plus icon"></i>
                         `;
+                    }
                 });
             }
         }
